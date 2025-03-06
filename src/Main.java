@@ -35,10 +35,22 @@ public class Main {
          int numero = 6;
         boolean resultado = isPar(numero);
         System.out.println("o número " + numero + " é par : " + resultado); 
-        }
-
-        }
-    }
        
+        String texto = "Exemplo de String";
+        String textoInvertido = inverterString(texto);
+
+        System.out.println("Texto original: " + texto);
+        System.out.println("Texto invertido: " + textoInvertido);
+        
+        }
+    public static String inverterString(String str) {
+        StringBuilder sb = new StringBuilder(str);
+        return sb.reverse().toString();
     }
+   
 }
+   }
+  }  
+ }
+}
+
