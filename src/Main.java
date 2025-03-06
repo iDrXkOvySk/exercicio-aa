@@ -26,10 +26,17 @@ public class Main {
            System.out.println("Digite um número inteiro positivo : ");
         int n = sc.nextInt();
           
+
+             double[] numeros = {10,20,30,40,50,60,70,80,90,100};
+
+        double media = calcularMedia(numeros);
+        System.out.println("A média dos números é : " + media);
+
            String texto = "Exemplo de contagem de vogais";
 
         int quantidadeVogais = contarVogais(texto);
         System.out.println("Quantidade de vogais : " + quantidadeVogais);
+
     }
 
         if (n < 0){
@@ -47,7 +54,16 @@ public class Main {
 
         System.out.println("Texto original: " + texto);
         System.out.println("Texto invertido: " + textoInvertido);
-        
+
+
+    public static double calcularMedia(double[] numeros){
+        double soma = 0;
+
+        for (double numero : numeros){
+            soma += numero;
+        }
+        return soma / numeros.length;
+    }
 
     public static int contarVogais(String str){
         int contador = 0;
@@ -63,12 +79,12 @@ public class Main {
         }
         return contador;
     }  
+
         }
     public static String inverterString(String str) {
         StringBuilder sb = new StringBuilder(str);
         return sb.reverse().toString();
     }
-   
 }
    }
   }  
