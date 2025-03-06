@@ -1,6 +1,17 @@
 import java.util.Scanner;
 
 public class Main {
+    public static boolean isPar(int numero){
+        return numero % 2 == 0;
+    }
+    
+    public static int somaDoisNumeros(int n1, int n2){
+      return n1 + n2;
+    }
+    public static void main(String[] args) {
+        int resultado = somaDoisNumeros(3, 4);
+        System.out.println("A soma é : " + resultado);
+
 
     public static int calcularFatorial(int n) {
         if (n == 0 || n == 1) {
@@ -11,12 +22,8 @@ public class Main {
                 resultado *= i;
             }
             return resultado;
-        }
-    }
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-
-        System.out.println("Digite um número inteiro positivo : ");
+          
+           System.out.println("Digite um número inteiro positivo : ");
         int n = sc.nextInt();
 
         if (n < 0){
@@ -24,8 +31,14 @@ public class Main {
         }else{
             int fatorial = calcularFatorial(n);
             System.out.println("O fatorial de " + n + " é " + fatorial);
+         
+         int numero = 6;
+        boolean resultado = isPar(numero);
+        System.out.println("o número " + numero + " é par : " + resultado); 
         }
 
+        }
     }
-
+       
+    }
 }
